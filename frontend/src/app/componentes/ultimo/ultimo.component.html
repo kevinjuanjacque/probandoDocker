@@ -1,0 +1,35 @@
+<div id="body2">
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-1" *ngFor="let file of archivos">
+            <div id="archivo" class="card" style="margin: 15px;">
+                <div class="card-body" >
+                  <img style="float: left; margin-right: 7px;" src="https://image.flaticon.com/icons/svg/337/337946.svg" class="card-img-left" alt="..." width="100" height="100">
+                  <h5 class="card-title">{{file.name}}</h5>
+                  <p class="card-text">{{file.descripcion}}</p>
+                </div>
+                <div class="col align-self-end text-right" >
+                    <button (click)="revisar(file._id)" type="submit" class="btn btn-link">Descargar</button>
+                    <button (click)="revisar(file._id)" type="submit" class="btn btn-link">Revisar</button>
+                </div>
+            </div>
+            
+        </div> 
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+</div>
+
+</div>

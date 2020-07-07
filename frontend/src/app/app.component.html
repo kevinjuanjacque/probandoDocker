@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/Search">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Logo_nuevo_ucen.png" width="70" height="70">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Search" routerLinkActive="active">Buscador</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Reciente" routerLinkActive="active" >Reciente </a>
+      </li>
+    </ul>
+
+    <app-iniciar-sesion></app-iniciar-sesion>
+
+    
+    
+  </div>
+</nav>
+<div id="unico">
+  
+    <router-outlet></router-outlet>
+  
+  
+</div>
+
+
+
+
+

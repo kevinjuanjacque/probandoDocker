@@ -1,0 +1,35 @@
+BD diseñada para gestionar cobranza
+Clientes info cliente
+Comunca info de donde pertenece cliente
+detalle deuda, existe el concepto deuda donde la deuda tiene el n° de cuenta, este tiene que ver con el n° de cliente unico.
+La deuda total corresponde a la sumatoria de las cuotas que DEBE el cliente y las cuotas está en la tabla detalles deuda 1 a n.
+estado de la deuda: tres estados;foto en teams.
+Deuda vigente, cliente que debe entre 1 a 60 dias. Si vence el 12, el 13 soy vigente.
+Deuda castigada, desde el día 61.
+Deuda preventiva, deuda que no ha vencido.
+detalle deuda:
+capital: cuota base 
+
+ 
+
+el cliente puede tener n  emails distintos.
+gestion: la fecha de incio debe ser menor que la fecha de fin, 10 seg a 1 min y medio en el aleatorio al momento de llenar la tabla(fechas)
+fecha inicio: desde qe partio el llamado
+final: cuando terminó el llamado
+
+ 
+
+Crear registros aleatorios en cada tabla, menos la tabla pago.
+Se deben crear al menos 1millon de clientes aleatorios
+Deben crear al menos 5 millones de gestiones en fechas distintas.
+Crear 20 ejecutivos
+Detalle deuda, debe tener 500mil registros.
+La tabla deuda debe tener 250mil registros(mitad del detalle)
+Telefonos, 1 millon 200 registros
+Email, 1 millon 200 registros
+empresas, 100 distintas
+estado de deuda: en el chat
+
+ 
+
+Convertir de mysql a postgress, creando procedimiento almacenido

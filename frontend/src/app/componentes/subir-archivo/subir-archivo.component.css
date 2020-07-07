@@ -1,0 +1,14 @@
+#mitoast {
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    right: 2.5%;
+    top: 50%;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: .25rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.1);
+    max-width: 310px;
+    width: 310px;
+    background-color: #ffffff;
+    opacity: 1;
+  }

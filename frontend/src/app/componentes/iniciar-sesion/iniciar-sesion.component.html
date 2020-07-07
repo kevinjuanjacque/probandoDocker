@@ -1,0 +1,52 @@
+
+
+<ng-container *ngIf="!auth.verificaToken(); else iniciado">
+  <form (submit)="iniciarSesion()" class="needs-validation" novalidate>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        
+          <label class="col-form-label col-form-label-sm" for="Rut" >Username</label>
+          <input [(ngModel)]="user.RUT" name="rut" class="form-control form-control-sm " style="margin-right: 10px;" type="text" placeholder="11.111.111-1" id="Rut" required>
+         </li>
+      <li class="input-field " style="margin-left: 5px;">
+        <label class="col-form-label col-form-label-sm" for="pass">Password</label>
+        <input [(ngModel)]="user.password" name="password" class="form-control form-control-sm " type="password" placeholder="password" id="pass" >
+      </li>
+    
+        <button type="submit" class="btn btn-warning btn-sm" style="margin-left: 10px; margin-top: 30px;">Iniciar</button>
+      
+    </ul>
+  </form>
+</ng-container>
+
+<ng-template #iniciado>
+  <ul class="navbar-nav ml-auto">
+    <li>
+      <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" style="margin-right: 15px;" title="subir Archivo">
+        <i class="large material-icons" style="margin-top: 5px; margin-right: 0px;">cloud_upload</i>
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <app-subir-archivo></app-subir-archivo>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{nombre}}</a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" style="cursor: pointer;" routerLink="/MisFiles">mis archivos</a>
+        <a class="dropdown-item" (click)="auth.cerrarSesion()" style="cursor: pointer;">Cerrar Sesion</a>
+      </div>
+    </li>
+  </ul>
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+  
